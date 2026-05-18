@@ -3,8 +3,9 @@ description: "Live Voice AI Human Brain Android App"
 publish_to: 'none'
 version: 1.0.0+1
 
+# ဒီနေရာမှာ Flutter နဲ့ Dart SDK ဗားရှင်းကို အသစ်ဆုံး မြှင့်လိုက်ပါတယ်
 environment:
-  sdk: '>=3.2.3 <4.0.0'
+  sdk: '>=3.4.0 <4.0.0'
 
 dependencies:
   flutter:
@@ -12,7 +13,8 @@ dependencies:
   google_generative_ai: ^0.4.0
   record: ^5.1.2
   just_audio: ^0.9.36
-  flutter_tts: ^4.1.0
+  # flutter_tts ကို ပိုပြီး ကိုက်ညီမယ့် ဗားရှင်း ပြောင်းပေးထားပါတယ်
+  flutter_tts: ^4.0.2
   shared_preferences: ^2.2.2
 
 dev_dependencies:
