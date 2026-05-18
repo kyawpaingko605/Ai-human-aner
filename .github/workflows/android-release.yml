@@ -10,15 +10,14 @@ jobs:
 
     steps:
     - name: Checkout Source Code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4 # v3 မှ v4 သို့ မြှင့်တင်ထားသည်
 
     - name: Set up JDK 17
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4 # v3 မှ v4 သို့ မြှင့်တင်ထားသည်
       with:
         distribution: 'zulu'
         java-version: '17'
 
-    # ဒီနေရာမှာ GitHub က သုံးမယ့် Flutter ဗားရှင်းကို နောက်ဆုံးထွက် Stable ဖြစ်အောင် မြှင့်လိုက်ပါတယ်
     - name: Set up Flutter
       uses: subosito/flutter-action@v2
       with:
@@ -31,7 +30,7 @@ jobs:
       run: flutter build apk --release --no-tree-shake-icons
 
     - name: Upload APK Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4 # v3 မှ v4 သို့ မြှင့်တင်ထားသည် (ဒီနေရာက အဓိက အမှားပြင်ဆင်ချက်ပါ)
       with:
         name: Burmese-AI-Brain-APK
         path: build/app/outputs/flutter-apk/app-release.apk
