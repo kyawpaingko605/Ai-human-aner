@@ -18,10 +18,11 @@ jobs:
         distribution: 'zulu'
         java-version: '17'
 
-    - name: Set up Flutter (Latest Stable)
+    # ဒီနေရာမှာ GitHub က သုံးမယ့် Flutter ဗားရှင်းကို နောက်ဆုံးထွက် Stable ဖြစ်အောင် မြှင့်လိုက်ပါတယ်
+    - name: Set up Flutter
       uses: subosito/flutter-action@v2
       with:
-        channel: 'stable' # ဗားရှင်းမသတ်မှတ်ဘဲ အသစ်ဆုံး Stable ဖြစ်တာကို ယူခိုင်းလိုက်တာပါ
+        channel: 'stable'
 
     - name: Get Flutter Packages
       run: flutter pub get
